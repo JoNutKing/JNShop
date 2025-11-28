@@ -1,0 +1,494 @@
+body {
+    font-family: 'Prompt', 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    h1,
+    h2,
+    h3 {
+        font-family: 'Montserrat', sans-serif;
+    }
+    p,
+    a,
+    span,
+    li,
+    button {
+        font-family: 'Prompt', sans-serif;
+    }
+}
+
+header {
+    display: flex;
+    margin: 0.5rem;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 30px;
+    background: #ffffff;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+}
+
+.menu {
+    margin-left: 18px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 300;
+}
+
+
+/* เมนูปกติ */
+
+.menu a {
+    position: relative;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+
+/* สีตอน hover */
+
+.menu a:hover {
+    color: #d62828;
+    /* สีแดงแบบโลโก้ JoNutShop */
+}
+
+
+/* ขีดเส้นใต้แอนิเมชั่น */
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    /* ระยะห่างจากตัวหนังสือ */
+    width: 0%;
+    height: 2px;
+    background: #d62828;
+    /* สีแดง */
+    transition: width 0.3s ease;
+}
+
+
+/* เวลา hover → เส้นจะค่อยๆ ยาวออก */
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.menu a.login-btn {
+    background: #d62828;
+    color: #ffffff;
+    padding: 9px 13px;
+    border-radius: 8px;
+    font-weight: 600px;
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.menu a.login-btn:hover {
+    background: #bb1f1f;
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.menu a:not(.login-btn) {
+    margin-right: 12px;
+    font-weight: lighter;
+    text-decoration: none;
+    color: #000000;
+}
+
+.hero {
+    background: #000000;
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: #ffffff;
+    max-width: 600px;
+    width: 100%;
+    p {
+        font-size: 13px;
+        margin-bottom: 20px;
+        opacity: 0.9;
+    }
+}
+
+.Name-section h2 {
+    color: #ffffff;
+    font-size: 23px;
+    margin: 0;
+}
+
+.hero-buttons a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 27px;
+    font-size: 15px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.hero-buttons .btn {
+    width: 100px !important;
+    /* บังคับให้ขนาดคงที่ */
+    padding: 12px 20px !important;
+    /* บังคับลดความสูง */
+    font-size: 15px !important;
+    /* บังคับขนาดฟอนต์ */
+    border-radius: 20px !important;
+    /* ให้ปุ่มโค้งกำลังดี */
+    margin: 0 auto !important;
+    text-align: center !important;
+    display: block;
+}
+
+.btn.red {
+    background: #d62828 !important;
+}
+
+.btn.green {
+    background: #2a9d8f !important;
+}
+
+
+/* สำหรับ Desktop ให้แสดงแบบ 2 ปุ่มอยู่ติดกัน */
+
+@media (min-width: 1025px) {
+    .hero-buttons {
+        flex-direction: row;
+        gap: 25px;
+    }
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.banner-section {
+    width: 100%;
+    background: #ffffff;
+    padding: 35px 0;
+    padding-top: 20px;
+    padding-bottom: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-section img {
+    width: 80%;
+    max-width: 900px;
+    border-radius: 20px;
+    display: block;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 30px 0;
+    padding-top: 1px;
+    padding-bottom: 35px;
+    margin-top: -10px;
+    background: #ffffff;
+}
+
+.feature-box {
+    background: #ffffff;
+    width: 259px;
+    padding: 15px 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+    transition: 0.2s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.icon-emoji {
+    font-size: 30px;
+    margin-bottom: 13px;
+}
+
+.feature-box h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: 600px;
+}
+
+.feature-box p {
+    margin: 0;
+    padding: 0 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600px;
+    padding: 1rem 0;
+    text-align: center;
+    margin: 50px 0 30px;
+    position: relative;
+}
+
+.section-title::before {
+    content: "";
+    width: 120px;
+    height: 3px;
+    background: #ff4747;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 5px;
+}
+
+.section-title {
+    margin: 1px;
+}
+
+.section-title h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: rgb(238, 235, 235);
+    padding: 25px 10px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15pxx rgba(105, 104, 104, 0.1);
+    transition: 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #FFD6D6;
+    color: #c70000;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.badge.video {
+    background: #ffd6ef;
+    color: #c20067;
+}
+
+
+/* รูปสินค้า */
+
+.product-img {
+    width: 70px;
+    height: 70px;
+    /* กำหนดความสูงคงที่ */
+    object-fit: contain;
+    /* ใส่ภาพแบบไม่บิด */
+    margin-bottom: 15px;
+}
+
+
+/* ชื่อ */
+
+.product-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+
+/* คำอธิบาย */
+
+.product-desc {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+
+/* ปุ่มดูรายละเอียด */
+
+.detail-btn {
+    background: #d62828;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 18px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.detail-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+.footer {
+    background: #eaeaea;
+    /* สีเทาอ่อน */
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+    /* เว้นจากเนื้อหาด้านบน */
+    color: #555;
+}
+
+.footer h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.footer p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+/* ===========================
+   RESPONSIVE สำหรับ Tablet (iPad)
+   ความกว้าง ≤ 1024px
+   =========================== */
+
+@media (max-width: 1024px) {
+    /* Header */
+    header {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+    /* Hero Section */
+    .hero {
+        padding: 40px 20px;
+    }
+    .hero-content h1 {
+        font-size: 30px;
+    }
+    /* ปุ่มใน Tablet → เรียงแนวตั้ง */
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+    .hero-buttons .btn {
+        width: 260px;
+        padding: 12px 14px;
+        font-size: 15px;
+    }
+}
+
+
+/* ====================================
+   RESPONSIVE สำหรับมือถือ ≤ 768px
+   ==================================== */
+
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        padding: 10px 0;
+    }
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+    /* HERO Section */
+    .hero {
+        padding: 25px 10px;
+    }
+    .hero-content {
+        width: 100%;
+        max-width: 320px;
+    }
+    /* ปุ่ม → เรียงแนวตั้ง */
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+    /* ปุ่มมือถือที่สวยที่สุด */
+    .hero-buttons .btn {
+        width: 220px;
+        max-width: 100%;
+        padding: 10px 12px;
+        font-size: 14px;
+        border-radius: 16px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    /* Feature → เรียงแนวตั้ง */
+    .features {
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+        gap: 20px;
+    }
+    .feature-box {
+        width: 100%;
+    }
+    /* Product → 1 คอลัมน์ */
+    .product-grid {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+    .product-card {
+        width: 100%;
+    }
+    /* Footer */
+    .footer {
+        padding: 20px 0;
+    }
+}

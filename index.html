@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap&subset=thai" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>JNShop</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">JoNutShop</div>
+        <nav class="menu">
+            <a href="#">หน้าเเรก</a>
+            <a href="#">แอพพรีเมียม</a>
+            <a href="#">เติมเงิน</a>
+            <a href="#">ติดต่อ</a>
+            <a href="#" class="login-btn">เข้าสู่ระบบ</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <section class="Name-section">
+                <h2>JoNutShop</h2>
+                <p>จำหน่ายอาหารแมวพรีเมียมราคาถูก น่าเชื่อถือ คุณภาพ</p>
+            </section>
+
+            <div class="hero-buttons">
+                <div class="left-btn">
+                    <a href="#" class="btn red">เข้าสู่ระบบ</a>
+                </div>
+
+                <div class="right-btn">
+                    <a href="#" class="btn green">สมัครสมาชิก</a>
+                </div>
+    </section>
+
+    <section class="banner-section">
+        <img src="Images/U3.jpg" alt="banner">
+    </section>
+
+    <section class="features">
+        <div class="feature-box">
+            <div class="icon-emoji">✨</div>
+            <h3>ก็มาดิค่าบ</h3>
+            <p>รับสินค้าอัตโนมัติในนาที</p>
+        </div>
+
+        <div class="feature-box">
+            <div class="icon-emoji">😂</div>
+            <h3>เปิดก่อนได้ปูด</h3>
+            <p>ลูกค้าพอใจ ซื้อซ้ำต่อ</p>
+        </div>
+
+        <div class="feature-box">
+            <div class="icon-emoji">💕</div>
+            <h3>จัดไป</h3>
+            <p>ตอบกลับรวดเร็วทันใจ</p>
+        </div>
+    </section>
+
+    <section class="section-title">
+        <h2>📲แอพมีสำนี่ละเลือกเอาโลด📲</h2>
+    </section>
+
+    <section class="product-grid">
+        <div class="product-card">
+            <span class="badge">ดูหนัง</span>
+            <img src="data:image/png;base64,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"
+                class="product-img" alt="Netflix">
+            <h3 class="product-title">Netflix Premium</h3>
+            <p class="product-desc">ดูหนัง UltraHD 4K</p>
+            <button class="detail-btn" onclick="openPopup()">ดูรายละเอียด</button>
+        </div>
+
+        <div class="product-card">
+            <span class="badge">ดูหนัง</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1280px-YouTube_full-color_icon_%282017%29.svg.png" class="product-img" alt="YouTube">
+            <h3 class="product-title">YouTube Premium</h3>
+            <p class="product-desc">ดูหนัง UltraHD 4K</p>
+            <button class="detail-btn" onclick="openPopup()">ดูรายละเอียด</button>
+        </div>
+
+        <div class="product-card">
+            <span class="badge">ดูหนัง</span>
+            <img src="https://vsdaily.com/wp-content/uploads/2023/04/iqiyi-logo.jpg" class="product-img" alt="iQIYI">
+            <h3 class="product-title">iQIYI VIP Premium 4K</h3>
+            <p class="product-desc">ดูหนัง 4K ได้ไม่อั้น รองรับทุกอุปกรณ์</p>
+            <button class="detail-btn" onclick="openPopup()">ดูรายละเอียด</button>
+        </div>
+
+        <div class="product-card">
+            <span class="badge">ดูหนัง</span>
+            <img src="https://yt3.googleusercontent.com/l0zDbKxjWdg1N5w85Wa5xi0eLiQSYW19u9i7BNErQ5q9_nkZCGYFq2R_IF6ijE4z8Tf7ou2mCw=s900-c-k-c0x00ffffff-no-rj" class="product-img" alt="iQIYI">
+            <h3 class="product-title">Disney+</h3>
+            <p class="product-desc">ดูหนัง/ซีรี่ย์/การ์ตูน คมชัดระดับ Full HD 4K</p>
+            <button class="detail-btn" onclick="openPopup()">ดูรายละเอียด</button>
+        </div>
+
+        <div class="product-card">
+            <span class="badge">ดูหนัง</span>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-8-qpQA7jDuVPCVBtjjrDpSob0vUeKrJ9r8f_t29FjGP3ggDS7HWEdlRHMfVVqDI5b2Y&usqp=CAU" class="product-img" alt="iQIYI">
+            <h3 class="product-title">Bilibili</h3>
+            <p class="product-desc">ดูการ์ตูนอนิเมะ คมชัดระดับ Full HD</p>
+            <button class="detail-btn" onclick="openPopup()">ดูรายละเอียด</button>
+        </div>
+
+        <div class="product-card">
+            <span class="badge">ดูหนัง</span>
+            <img src="https://play-lh.googleusercontent.com/8XUaBjwriPl0ODDJ08hqyuhM99Zap67dLb2jhA1j-VGAM6_oO5K8vd4FlWU_qt0pE59pQEKSDLu6AeQc4pRNlQ=w240-h480-rw" class="product-img" alt="iQIYI">
+            <h3 class="product-title">TrueID+</h3>
+            <p class="product-desc">ดูหนัง/ซีรี่ย์ แบบไม่มีโฆษณา Full HD</p>
+            <button class="detail-btn" onclick="openPopup()">ดูรายละเอียด</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h3>JoNutShop</h3>
+        <p>@ 2025 JonutShop. All rights reserved.</p>
+    </footer>
+
+    </div>
+</body>
+
+</html>
